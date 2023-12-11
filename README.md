@@ -1,5 +1,7 @@
 ## A node express project to implement your first middleware
 git clone and npm install your project.
+setup your .env duplicating the .env.sample
+Import the database via the script in the config folder (use workbench data import) : ddl => create tables structures, dml => insert data
 The workshop is decline step by step.
 
 ## Presentation
