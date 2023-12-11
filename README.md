@@ -10,7 +10,7 @@ At this step, we have a two routes that retrieve a list of user and retrieve a u
 
 - 0/ In your server configuration : use express.json() middleware to parse request body
 
-- 1/ Create a post route ('/users/:id')
+- 1/ Create a post route ('/users')
 
 - 2/ In your controller, before sending the response, add a check if the body contains a key role. If yes, return the full information, else return a 400 with a message : "should contains a role"
 
