@@ -1,8 +1,7 @@
 ## A node express project to implement your first middleware
-git clone and npm install your project.
-setup your .env duplicating the .env.sample
-Import the database via the script in the config folder (use workbench data import) : ddl => create tables structures, dml => insert data
-The workshop is decline step by step.
+- git clone and npm install your project.
+- setup your .env duplicating the .env.sample
+- Import the database via the script in the config folder (use workbench data import) : ddl => create tables structures, dml => insert data
 
 ## Presentation
 At this step, we have a two routes that retrieve a list of user and retrieve a user by id. The goal is, from this information, to post (/users/:id) with the correct role (ADMIN, USER) in the body with the other information email, password. Email should be structured like a email (hint: use regex to validate the format of the email) and password should have a minimum of 8 caracters and contains lowercase/uppercase/numeric (bonus check special caracters too)
