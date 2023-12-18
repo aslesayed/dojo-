@@ -1,5 +1,18 @@
 const { findAll, findOneById } = require("../models/users.model");
 
+const postUsers = async(req, res) =>{
+  try {
+    const { username, email, password } = req.body;
+     const [result] = await database.query("INSERT INTO movies(username, email, password ) VALUES (?, ?, ?, ?, ?)",
+     [username, email, password ]
+     );
+     res.status(201).send({ id: result.insertId });
+     } catch (error) {
+      console.error(error);
+      res.status(500).json("Server error...");
+    }
+};
+
 const getAll = async ({ res }) => {
   try {
     const [users] = await findAll();
@@ -23,4 +36,4 @@ const getOneById = async (req, res) => {
   }
 };
 
-module.exports = { getAll, getOneById };
+module.exports = { getAll, getOneById, postUsers };
